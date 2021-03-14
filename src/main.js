@@ -9,6 +9,7 @@ $("form#user-info").submit(function(event) {
   event.preventDefault();
   let earthAge = $("input#userAge").val();
   let lifeExpectancy = $("input#userLifeExpectancy").val();
+  let userName = $('input#userName').val();
 
   let currentUser = new User(earthAge, lifeExpectancy);
   let mercuryLifeExpect = currentUser.determineMercuryLifeExpectancy();
@@ -16,6 +17,7 @@ $("form#user-info").submit(function(event) {
   let marsLifeExpect = currentUser.determineMarsLifeExpectancy();
   let jupiterLifeExpect = currentUser.determineJupiterLifeExpectancy();
 
+  $('h3').text(`${userName}, thanks for using Super Galactic Age Calculator!`);
   $("#show-result").show();
   $('#mercury-age').text(currentUser.mercuryAge);
   $('#venus-age').text(currentUser.venusAge);
