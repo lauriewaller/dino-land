@@ -1,41 +1,29 @@
-import User from './js/user.js';
+//import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import $ from 'jquery';
 
+// $(document).ready(function() {
+//   $('#weatherLocation').click(function() {
+//     const city = $('#location').val();
+//     $('#location').val("");
 
-$("form#user-info").submit(function(event) {
-  event.preventDefault();
-  let earthAge = $("input#userAge").val();
-  let lifeExpectancy = $("input#userLifeExpectancy").val();
-  let userName = $('input#userName').val();
+//     let request = new XMLHttpRequest();
+//     const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.API_KEY}`;
 
-  let currentUser = new User(earthAge, lifeExpectancy);
-  let mercuryLifeExpect = currentUser.determineMercuryLifeExpectancy();
-  let venusLifeExpect = currentUser.determineVenusLifeExpectancy();
-  let marsLifeExpect = currentUser.determineMarsLifeExpectancy();
-  let jupiterLifeExpect = currentUser.determineJupiterLifeExpectancy();
+//     request.onreadystatechange = function() {
+//       if (this.readyState === 4 && this.status === 200) {
+//         const response = JSON.parse(this.responseText);
+//         getElements(response);
+//       }
+//     }
 
-  $('h3').text(`${userName}, thanks for using Super Galactic Age Calculator!`);
-  $("#show-result").show();
-  $('#mercury-age').text(currentUser.mercuryAge);
-  $('#venus-age').text(currentUser.venusAge);
-  $('#mars-age').text(currentUser.marsAge);
-  $('#jupiter-age').text(currentUser.jupiterAge);
-  
-  if (currentUser.lifeExpectancy < currentUser.earthAge) {
-    $('#anomaly').show();
-    $('#mercury-anomaly').text(Math.abs(mercuryLifeExpect));
-    $('#venus-anomaly').text(Math.abs(venusLifeExpect));
-    $('#mars-anomaly').text(Math.abs(marsLifeExpect));
-    $('#jupiter-anomaly').text(Math.abs(jupiterLifeExpect));
-  } else {
-    $('#life-expectancy').show();
-    $('#mercury-life-expect').text(mercuryLifeExpect);
-    $('#venus-life-expect').text(venusLifeExpect);
-    $('#mars-life-expect').text(marsLifeExpect);
-    $('#jupiter-life-expect').text(jupiterLifeExpect);
-  }
- 
-});
+//     request.open("GET", url, true);
+//     request.send();
+
+//    function getElements(response) {
+//       $('.showHumidity').text(`The humidity in ${city} is ${response.clouds.all}%`);
+//       $('.showTemp').text(`The temperature in Kelvins is ${response.main.temp} degrees.`);
+//     }
+//   });
+// });

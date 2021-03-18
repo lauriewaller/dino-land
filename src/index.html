@@ -1,51 +1,16 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Super Galactic Age Calculator</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Super Galactic Age Calculator</h1>
-
-      <form id="user-info">
-        <div class="form-group">
-          <label for="userAge">Enter Your Age</label>
-          <input type="number"  class="form-control" id="userAge">
-        </div>
-        <div class="form-group">
-          <label for="userLifeExpectancy">Enter Your Life Expectancy</label>
-          <input type="number"  class="form-control" id="userLifeExpectancy">
-        </div>
-        <div class="form-group">
-          <label for="userName">Enter Your Name</label>
-          <input type="test"  class="form-control" id="userName">
-        </div>
-
-        <button type="submit" class="btn-primary">Learn My Planet Ages!</button>
-
-      </form> 
-
-      <div id="show-result">
-        <p>Your age on Mercury would be <span id="mercury-age"></span>.</p> 
-        <p>Your age on Venus would be <span id="venus-age"></span>.</p> 
-        <p>Your age on Mars would be <span id="mars-age"></span>.</p> 
-        <p>Your age on Jupiter would be <span id="jupiter-age"></span>.</p> 
-      </div>
-
-      <div id="life-expectancy">
-        <p>Your life expectancy on Mercury would be <span id="mercury-life-expect"></span>.</p> 
-        <p>Your life expectancy on Venus would be <span id="venus-life-expect"></span>.</p> 
-        <p>Your life expectancy on Mars would be <span id="mars-life-expect"></span>.</p> 
-        <p>Your life expectancy on Jupiter would be <span id="jupiter-life-expect"></span>.</p> 
-      </div>
-
-      <div id="anomaly">
-        <p>You have lived <span id="mercury-anomaly"></span> years past your life expectancy on Mercury.</p> 
-        <p>You have lived <span id="venus-anomaly"></span> years past your life expectancy on Venus.</p>
-        <p>You have lived <span id="mars-anomaly"></span> years past your life expectancy on Mars.</p>
-        <p>You have lived <span id="jupiter-anomaly"></span> years past your life expectancy on Jupiter.</p>
-      </div>
-
-    </div>
-  </body>
+<html lang="en-US">
+<head>
+  <title>Weather</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Get Weather Conditions From Anywhere!</h1>
+    <label for="location">Enter a location:</label>
+    <input id="location" type="text">
+    <button class="btn-success" id="weatherLocation">Get Current Temperature and Humidity</button>
+    <div class="showErrors"></div>
+    <div class="showHumidity"></div>
+    <div class="showTemp"></div>
+  </div>
+</body>
 </html>
