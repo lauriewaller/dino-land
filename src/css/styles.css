@@ -1,16 +1,3 @@
-/* body {
-  background-color: azure;
+body {
+  background-color: lightblue;
 }
-*/
-
-#show-result {
-  display: none;
-} 
-
-#life-expectancy {
-  display: none;
-} 
-
-#anomaly{
-  display: none;
-} 
