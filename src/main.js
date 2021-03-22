@@ -9,13 +9,10 @@ $(document).ready(function() {
     event.preventDefault();
 
     let paragraph = $("input#para-number").val();
-    console.log(paragraph);
     let words = $("input#word-number").val();
-    console.log(words);
 
     let promise = DinoLand.dinoParagraphs(paragraph, words);
     promise.then(function(response) {
-      console.log(response);
 
       $('.showDino').text(`${response}`);
 
